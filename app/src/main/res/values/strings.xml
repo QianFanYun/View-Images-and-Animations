@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GlideDemo</string>
+    <string name="function_glide">Glide Demo</string>
+    <string name="load_normal_image">加载普通图片</string>
+    <string name="load_resource_image">加载资源图片</string>
+    <string name="showGif">显示Gif</string>
+    <string name="load_long_image">加载大图</string>
+    <string name="save_to_local">保存到手机</string>
+    <string name="see_big_photo">查看图片大图</string>
+</resources>
