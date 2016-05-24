@@ -49,7 +49,7 @@ public class BigPhotoActivity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        overridePendingTransition(R.anim.photo_activity_in,R.anim.photo_activity_out);
+        overridePendingTransition(R.anim.photo_activity_in, R.anim.photo_activity_out);
 
     }
 
@@ -82,7 +82,7 @@ public class BigPhotoActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             GlidePhotoView photoView = new GlidePhotoView(BigPhotoActivity.this, urls.get(position));
-            photoViews[position]=photoView;
+            photoViews[position] = photoView;
             Log.d("instantiateItem", "instantiateItem");
             container.addView(photoView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             return photoView;

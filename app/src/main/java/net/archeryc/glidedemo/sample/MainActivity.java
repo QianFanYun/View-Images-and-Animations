@@ -20,14 +20,7 @@ import net.archeryc.glidedemo.R;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private String[] urls = {
-            "http://ww2.sinaimg.cn/large/610dc034jw1f454lcdekoj20dw0kumzj.jpg",
-            "http://ww3.sinaimg.cn/mw690/8345c393jw1f32xv7zd4gj20go24yaqv.jpg",
-            "http://ww1.sinaimg.cn/large/7a8aed7bgw1f3damign7mj211c0l0dj2.jpg",
-            "http://ww2.sinaimg.cn/large/7a8aed7bjw1f3c7zc3y3rj20rt15odmp.jpg"
-    };
-    //http://ww1.sinaimg.cn/large/7a8aed7bjw1f2zwrqkmwoj20f00lg0v7.jpg
-    //http://ww3.sinaimg.cn/mw690/8345c393jw1f32xv7zd4gj20go24yaqv.jpg
+
     private static final String normalUrl = "http://ww1.sinaimg.cn/large/7a8aed7bjw1f2zwrqkmwoj20f00lg0v7.jpg";
     private static final String gifUrl = "http://ww2.sinaimg.cn/large/85cccab3tw1esjq9r0pcpg20d3086qtr.jpg";
 

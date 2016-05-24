@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96476b27-1fc2-4419-b478-099fad34b7fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/PhotoViewAttacher.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/PhotoViewAttacher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/sample/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/sample/MainActivity.java" />
@@ -45,43 +46,40 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1958#1959#0" expanded="true" />
-                <element signature="e#2001#2002#0" expanded="true" />
-                <element signature="e#3990#4187#0" expanded="true" />
-                <element signature="e#4186#4187#0" expanded="true" />
-                <element signature="e#4306#4307#0" expanded="true" />
-                <element signature="e#4337#4338#0" expanded="true" />
-                <element signature="e#4794#5100#0" expanded="true" />
-                <element signature="e#5099#5100#0" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
+                <element signature="e#1701#1898#0" expanded="true" />
+                <element signature="e#1897#1898#0" expanded="true" />
+                <element signature="e#2125#2126#0" expanded="true" />
+                <element signature="e#2168#2169#0" expanded="true" />
+                <element signature="e#4231#4232#0" expanded="true" />
+                <element signature="e#4264#4265#0" expanded="true" />
+                <element signature="e#5047#5305#0" expanded="true" />
+                <element signature="e#5304#5305#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/sample/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61981565">
-              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhotoViewAttacher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/PhotoViewAttacher.java">
+      <file leaf-file-name="BigPhotoActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="791" column="29" selection-start-line="791" selection-start-column="29" selection-end-line="791" selection-end-column="29" />
-              <folding>
-                <element signature="e#5907#5908#0" expanded="true" />
-                <element signature="e#5944#5945#0" expanded="true" />
-                <element signature="e#19263#19264#0" expanded="true" />
-                <element signature="e#19303#19304#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.937788">
+              <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/VersionedGestureDetector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -110,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/FroyoGestureDetector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -133,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/EclairGestureDetector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -143,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/CupcakeGestureDetector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="41" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="41" />
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1799,11 +1797,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/PhotoView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/OnGestureListener.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/PhotoViewAttacher.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/sample/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java" />
       </list>
     </option>
   </component>
@@ -1846,6 +1844,16 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View-Image-and-Animations" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -1869,6 +1877,22 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="90e5e644" />
     <property name="last_opened_file_path" value="D:/Documents" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="252" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="263" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="263" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1056" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="255" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="262" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="262" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -2305,7 +2329,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464068463488</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="宽图暂时不作处理">
+      <created>1464072892353</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1464072892353</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2327,7 +2357,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17811158" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17811158" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2377,7 +2407,8 @@
     <MESSAGE value="first commit&#10;" />
     <MESSAGE value="update gif" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="宽图暂时不作处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="宽图暂时不作处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2400,14 +2431,16 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1958#1959#0" expanded="true" />
-            <element signature="e#2001#2002#0" expanded="true" />
-            <element signature="e#3990#4187#0" expanded="true" />
-            <element signature="e#4186#4187#0" expanded="true" />
-            <element signature="e#4306#4307#0" expanded="true" />
-            <element signature="e#4337#4338#0" expanded="true" />
-            <element signature="e#4794#5100#0" expanded="true" />
-            <element signature="e#5099#5100#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1701#1898#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="e#2125#2126#0" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#4231#4232#0" expanded="true" />
+            <element signature="e#4264#4265#0" expanded="true" />
+            <element signature="e#5047#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2417,8 +2450,8 @@
         <state vertical-scroll-proportion="0.5610599">
           <caret line="15577" column="19" selection-start-line="15577" selection-start-column="19" selection-end-line="15577" selection-end-column="19" />
           <folding>
-            <element signature="e#608238#608239#0" expanded="true" />
-            <element signature="e#608266#608267#0" expanded="true" />
+            <element signature="e#608238#608239#0" expanded="false" />
+            <element signature="e#608266#608267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2427,14 +2460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -2472,22 +2497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/VersionedGestureDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/EclairGestureDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Android/sdk/sources/android-23/android/view/ScaleGestureDetector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2499,10 +2508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/FroyoGestureDetector.java">
+    <entry file="file://D:/Android/sdk/sources/android-23/android/graphics/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.3329493">
+          <caret line="518" column="19" selection-start-line="518" selection-start-column="19" selection-end-line="518" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -2510,8 +2519,37 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/CupcakeGestureDetector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="41" />
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/EclairGestureDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/FroyoGestureDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/PhotoViewAttacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66013825">
+          <caret line="425" column="37" selection-start-line="425" selection-start-column="37" selection-end-line="425" selection-end-column="37" />
+          <folding>
+            <element signature="e#5959#5960#0" expanded="true" />
+            <element signature="e#5996#5997#0" expanded="true" />
+            <element signature="e#19315#19316#0" expanded="true" />
+            <element signature="e#19355#19356#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2523,10 +2561,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Android/sdk/sources/android-23/android/graphics/Matrix.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/gestures/VersionedGestureDetector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329493">
-          <caret line="518" column="19" selection-start-line="518" selection-start-column="19" selection-end-line="518" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -2534,38 +2572,35 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1958#1959#0" expanded="true" />
-            <element signature="e#2001#2002#0" expanded="true" />
-            <element signature="e#3990#4187#0" expanded="true" />
-            <element signature="e#4186#4187#0" expanded="true" />
-            <element signature="e#4306#4307#0" expanded="true" />
-            <element signature="e#4337#4338#0" expanded="true" />
-            <element signature="e#4794#5100#0" expanded="true" />
-            <element signature="e#5099#5100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/photoview/PhotoViewAttacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="791" column="29" selection-start-line="791" selection-start-column="29" selection-end-line="791" selection-end-column="29" />
-          <folding>
-            <element signature="e#5907#5908#0" expanded="true" />
-            <element signature="e#5944#5945#0" expanded="true" />
-            <element signature="e#19263#19264#0" expanded="true" />
-            <element signature="e#19303#19304#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1701#1898#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="e#2125#2126#0" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#4231#4232#0" expanded="true" />
+            <element signature="e#4264#4265#0" expanded="true" />
+            <element signature="e#5047#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/sample/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61981565">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.937788">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
           <folding />
         </state>
       </provider>
