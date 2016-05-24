@@ -74,18 +74,18 @@ public class GlidePhotoView extends PhotoView {
             public void onLoadSuccess(Bitmap bitmap) {
                 if ((float) bitmap.getHeight() / (float) bitmap.getWidth() >= 3.0f) {//如果高度和宽度的比例大于3，说明是长图，全屏显示，MediuScale设置为屏幕大小，设置当前缩放为MediuScale
                     float mutiple = (float) PhotoViewHelper.screenWidth(mContext) / ((float) bitmap.getWidth() * PhotoViewHelper.screenHeight(mContext) / bitmap.getHeight());
-                    getAttacher().setMaximumScale(mutiple * 2);
-                    getAttacher().setMediumScale(mutiple);
-                    getAttacher().setZoomTransitionDuration(0);
-                    getAttacher().setScale(getAttacher().getMediumScale(), 0, 0, true);
+                    setMaximumScale(mutiple * 2);
+                    setMediumScale(mutiple);
+                    setZoomTransitionDuration(0);
+                    setScale(getAttacher().getMediumScale(), 0, 0, true);
                 }
-                if ((float) bitmap.getWidth() / (float) bitmap.getHeight() >= 3.0f) {
-                    float mutiple = (float) PhotoViewHelper.screenHeight(mContext) / ((float) bitmap.getHeight() * PhotoViewHelper.screenWidth(mContext) / bitmap.getWidth());
-                    getAttacher().setMaximumScale(mutiple * 2);
-                    getAttacher().setMediumScale(mutiple);
-                    getAttacher().setZoomTransitionDuration(0);
-                    getAttacher().setScale(getAttacher().getMediumScale(), 0, 0, true);
-                }
+//                if ((float) bitmap.getWidth() / (float) bitmap.getHeight() >= 3.0f) {
+//                    float mutiple = (float) PhotoViewHelper.screenHeight(mContext) / ((float) bitmap.getHeight() * PhotoViewHelper.screenWidth(mContext) / bitmap.getWidth());
+//                    setMaximumScale(mutiple * 2);
+//                    setMediumScale(mutiple);
+//                    setZoomTransitionDuration(0);
+//                    setScale(getAttacher().getMediumScale(), 0, 0, true);
+//                }
 
                 if (bitmap.getWidth() < bitmap.getHeight() && bitmap.getHeight() > MAX_HEIGHT_WIDTH) {//对过大的图片进行裁剪
                     setImageBitmap(Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() * MAX_HEIGHT_WIDTH / bitmap.getHeight(), MAX_HEIGHT_WIDTH, true));

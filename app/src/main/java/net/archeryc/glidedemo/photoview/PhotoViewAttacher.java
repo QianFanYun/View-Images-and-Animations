@@ -132,7 +132,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
     private net.archeryc.glidedemo.photoview.gestures.GestureDetector mScaleDragDetector;
 
     // These are set so we don't keep allocating them on the heap
-    private final Matrix mBaseMatrix = new Matrix();
+    private final Matrix mBaseMatrix = new Matrix();//最基础的matrix，即未缩放时的Matrix
     private final Matrix mDrawMatrix = new Matrix();
     private final Matrix mSuppMatrix = new Matrix();
     private final RectF mDisplayRect = new RectF();
@@ -159,6 +159,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
     }
 
     public PhotoViewAttacher(ImageView imageView, boolean zoomable) {
+        //防止内存泄漏
         mImageView = new WeakReference<>(imageView);
 
         imageView.setDrawingCacheEnabled(true);//确保可以获取到bitmap对象，但是这种做法效率略低
@@ -171,6 +172,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
         // Make sure we using MATRIX Scale Type
         setImageViewScaleTypeMatrix(imageView);
 
+        //
         if (imageView.isInEditMode()) {
             return;
         }
@@ -458,7 +460,9 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
                  * View.OnLayoutChangeListener. Instead we have to replicate the
                  * work, keeping track of the ImageView's bounds and then checking
                  * if the values change.
+                 * 记录图片在父控件中的位置
                  */
+
                 if (top != mIvTop || bottom != mIvBottom || left != mIvLeft
                         || right != mIvRight) {
                     // Update our base matrix, as the bounds have changed
@@ -775,12 +779,17 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
         }
     }
 
+    /**
+     * 对drawable进行平移使其贴合边界
+     * @return
+     */
     private boolean checkMatrixBounds() {
         final ImageView imageView = getImageView();
         if (null == imageView) {
             return false;
         }
 
+        //这个方法获取drawable对应的矩阵
         final RectF rect = getDisplayRect(getDrawMatrix());
         if (null == rect) {
             return false;
@@ -925,6 +934,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
             return;
         }
 
+        //获取ImageView的宽高和drawable的宽高
         final float viewWidth = getImageViewWidth(imageView);
         final float viewHeight = getImageViewHeight(imageView);
         final int drawableWidth = d.getIntrinsicWidth();
