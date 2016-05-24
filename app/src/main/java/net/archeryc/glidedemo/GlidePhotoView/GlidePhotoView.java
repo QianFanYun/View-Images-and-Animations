@@ -86,7 +86,7 @@ public class GlidePhotoView extends PhotoView {
                     float mutiple = (float) PhotoViewHelper.screenWidth(mContext) / ((float) bitmap.getWidth() * PhotoViewHelper.screenHeight(mContext) / bitmap.getHeight());
                     setMaximumScale(mutiple * 2);
                     setMediumScale(mutiple);
-                    setZoomTransitionDuration(0);
+                    setZoomTransitionDuration(1);
                     setScale(mutiple, 0, 0, true);
                 }
 //                if ((float) bitmap.getWidth() / (float) bitmap.getHeight() >= 3.0f) {
