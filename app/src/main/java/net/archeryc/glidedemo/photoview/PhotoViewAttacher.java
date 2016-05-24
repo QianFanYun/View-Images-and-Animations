@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2011, 2012 Chris Banes.
- *
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p/>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p/>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -36,6 +36,7 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
 
+import net.archeryc.glidedemo.GlidePhotoView.PhotoViewHelper;
 import net.archeryc.glidedemo.photoview.gestures.OnGestureListener;
 import net.archeryc.glidedemo.photoview.gestures.VersionedGestureDetector;
 import net.archeryc.glidedemo.photoview.scrollerproxy.ScrollerProxy;
@@ -674,6 +675,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
     /**
      * Set the zoom interpolator
+     *
      * @param interpolator the zoom interpolator
      */
     public void setZoomInterpolator(Interpolator interpolator) {
@@ -724,6 +726,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
     /**
      * Like {@link #getDisplayMatrix()}, but allows the user to provide a matrix to copy the values into to reduce object allocation
+     *
      * @param matrix target matrix to copy to
      */
     @Override
@@ -775,13 +778,14 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
         if (null != imageView && !(imageView instanceof IPhotoView)) {
             if (!ScaleType.MATRIX.equals(imageView.getScaleType())) {
                 throw new IllegalStateException(
-                        "The ImageView's ScaleType has been changed since attaching a PhotoViewAttacher. You should call setScaleType on the PhotoViewAttacher instead of on the ImageView"  );
+                        "The ImageView's ScaleType has been changed since attaching a PhotoViewAttacher. You should call setScaleType on the PhotoViewAttacher instead of on the ImageView");
             }
         }
     }
 
     /**
      * 对drawable进行平移使其贴合边界
+     *
      * @return
      */
     private boolean checkMatrixBounds() {
@@ -972,8 +976,12 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
             switch (mScaleType) {
                 case FIT_CENTER:
-                    mBaseMatrix
-                            .setRectToRect(mTempSrc, mTempDst, ScaleToFit.CENTER);
+                    //默认的scaleType
+                    float mutiple = (float) PhotoViewHelper.screenWidth(imageView.getContext()) / ((float) drawableWidth);
+                    mBaseMatrix.postScale(mutiple, mutiple, 0, 0);
+//                    mBaseMatrix
+//                            .setRectToRect(mTempSrc, mTempDst, ScaleToFit.CENTER);
+
                     break;
 
                 case FIT_START:
@@ -1062,7 +1070,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
         /**
          * A simple callback where out of photo happened;
-         * */
+         */
         void onOutsidePhotoTap();
     }
 
@@ -1137,7 +1145,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
             // We haven't hit our target scale yet, so post ourselves again
             if (t < 1f) {
                 Compat.postOnAnimation(imageView, this);
-            }else{
+            } else {
                 setZoomTransitionDuration(DEFAULT_ZOOM_DURATION);
             }
 

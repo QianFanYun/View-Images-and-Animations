@@ -81,14 +81,13 @@ public class GlidePhotoView extends PhotoView {
 
             @Override
             public void onLoadSuccess(Bitmap bitmap) {
-                stopAnim();
-                if ((float) bitmap.getHeight() / (float) bitmap.getWidth() >= MIN_MUTIPLE) {//如果高度和宽度的比例大于3，说明是长图，全屏显示，MediuScale设置为屏幕大小，设置当前缩放为MediuScale
-                    float mutiple = (float) PhotoViewHelper.screenWidth(mContext) / ((float) bitmap.getWidth() * PhotoViewHelper.screenHeight(mContext) / bitmap.getHeight());
-                    setMaximumScale(mutiple * 2);
-                    setMediumScale(mutiple);
-                    setZoomTransitionDuration(1);
-                    setScale(mutiple, 0, 0, true);
-                }
+//                if ((float) bitmap.getHeight() / (float) bitmap.getWidth() >= MIN_MUTIPLE) {//如果高度和宽度的比例大于3，说明是长图，全屏显示，MediuScale设置为屏幕大小，设置当前缩放为MediuScale
+//                    float mutiple = (float) PhotoViewHelper.screenWidth(mContext) / ((float) bitmap.getWidth() * PhotoViewHelper.screenHeight(mContext) / bitmap.getHeight());
+//                    setMaximumScale(mutiple * 2);
+//                    setMediumScale(mutiple);
+//                    setZoomTransitionDuration(1);
+//                    setScale(mutiple, 0, 0, true);
+//                }
 //                if ((float) bitmap.getWidth() / (float) bitmap.getHeight() >= 3.0f) {
 //                    float mutiple = (float) PhotoViewHelper.screenHeight(mContext) / ((float) bitmap.getHeight() * PhotoViewHelper.screenWidth(mContext) / bitmap.getWidth());
 //                    setMaximumScale(mutiple * 2);
@@ -104,6 +103,7 @@ public class GlidePhotoView extends PhotoView {
                 } else {
                     setImageBitmap(bitmap);
                 }
+                stopAnim();
                 longClickDialog.setBitmap(bitmap);
 
             }
