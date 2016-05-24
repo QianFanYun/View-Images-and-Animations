@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private String[] urls = {
-            "http://ww3.sinaimg.cn/mw690/005Fj2RDgw1f3tg4dkfwjj30c846kwy6.jpg",
+            "http://ww2.sinaimg.cn/large/610dc034jw1f454lcdekoj20dw0kumzj.jpg",
             "http://ww3.sinaimg.cn/mw690/8345c393jw1f32xv7zd4gj20go24yaqv.jpg",
             "http://ww1.sinaimg.cn/large/7a8aed7bgw1f3damign7mj211c0l0dj2.jpg",
             "http://ww2.sinaimg.cn/large/7a8aed7bjw1f3c7zc3y3rj20rt15odmp.jpg"
@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
     public void showBigImage(View view){
         Intent intent = new Intent(this, BigPhotoActivity.class);
         ArrayList<String> urls = new ArrayList<>();
-        urls.add("http://ww3.sinaimg.cn/mw690/005Fj2RDgw1f3tg4dkfwjj30c846kwy6.jpg");
-        urls.add("http://ww1.sinaimg.cn/large/7a8aed7bgw1f3j8jt6qn8j20vr15owvk.jpg");
+        urls.add("http://ww2.sinaimg.cn/large/610dc034jw1f454lcdekoj20dw0kumzj.jpg");
+        urls.add("http://ww4.sinaimg.cn/large/610dc034jw1f41lxgc3x3j20jh0tcn14.jpg");
         urls.add("http://ww3.sinaimg.cn/mw690/8345c393jw1f32xv7zd4gj20go24yaqv.jpg");
         urls.add("http://ww2.sinaimg.cn/large/7a8aed7bjw1f3c7zc3y3rj20rt15odmp.jpg");
 

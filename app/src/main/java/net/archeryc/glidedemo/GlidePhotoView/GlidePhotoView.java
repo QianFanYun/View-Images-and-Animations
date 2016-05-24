@@ -63,7 +63,6 @@ public class GlidePhotoView extends PhotoView {
             @Override
             public void onLoadStart() {
                 startAnim();
-                invalidate();
             }
 
             @Override
@@ -73,12 +72,10 @@ public class GlidePhotoView extends PhotoView {
 
             @Override
             public void onLoadSuccess(Bitmap bitmap) {
-                stopAnim();
                 if ((float) bitmap.getHeight() / (float) bitmap.getWidth() >= 3.0f) {//如果高度和宽度的比例大于3，说明是长图，全屏显示，MediuScale设置为屏幕大小，设置当前缩放为MediuScale
                     float mutiple = (float) PhotoViewHelper.screenWidth(mContext) / ((float) bitmap.getWidth() * PhotoViewHelper.screenHeight(mContext) / bitmap.getHeight());
                     getAttacher().setMaximumScale(mutiple * 2);
                     getAttacher().setMediumScale(mutiple);
-                    getAttacher().update();
                     getAttacher().setZoomTransitionDuration(0);
                     getAttacher().setScale(getAttacher().getMediumScale(), 0, 0, true);
                 }
@@ -86,7 +83,6 @@ public class GlidePhotoView extends PhotoView {
                     float mutiple = (float) PhotoViewHelper.screenHeight(mContext) / ((float) bitmap.getHeight() * PhotoViewHelper.screenWidth(mContext) / bitmap.getWidth());
                     getAttacher().setMaximumScale(mutiple * 2);
                     getAttacher().setMediumScale(mutiple);
-                    getAttacher().update();
                     getAttacher().setZoomTransitionDuration(0);
                     getAttacher().setScale(getAttacher().getMediumScale(), 0, 0, true);
                 }
@@ -99,6 +95,7 @@ public class GlidePhotoView extends PhotoView {
                     setImageBitmap(bitmap);
                 }
                 longClickDialog.setBitmap(bitmap);
+                stopAnim();
 
             }
         });
@@ -113,6 +110,7 @@ public class GlidePhotoView extends PhotoView {
 
     public void startAnim(){
         isLoading=true;
+        invalidate();
     }
 
     private void stopAnim(){
@@ -138,6 +136,7 @@ public class GlidePhotoView extends PhotoView {
                     }
                 });
             } else {//家栋动画已经开始，使用currentValue画圆
+                paint.setColor(Color.WHITE);
                 canvas.drawCircle(0.5f * (float) PhotoViewHelper.screenWidth(mContext), 0.5f * (float) PhotoViewHelper.screenHeight(mContext), currentValue, paint);
             }
         }else{

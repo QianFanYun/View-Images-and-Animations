@@ -21,6 +21,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.RectF;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.AttributeSet;
@@ -33,6 +34,8 @@ public class PhotoView extends ImageView implements IPhotoView {
 
     private ScaleType mPendingScaleType;
 
+    private boolean shouldUpdate=true;
+
     public PhotoView(Context context) {
         this(context, null);
     }
@@ -43,11 +46,13 @@ public class PhotoView extends ImageView implements IPhotoView {
 
     public PhotoView(Context context, AttributeSet attr, int defStyle) {
         super(context, attr, defStyle);
+        //初始化的时候会把ScaleType设置成Matrix
         super.setScaleType(ScaleType.MATRIX);
         init();
     }
 
     protected void init() {
+        //如果没有attacher，则创建attacher对象
         if (null == mAttacher || null == mAttacher.getImageView()) {
             mAttacher = new PhotoViewAttacher(this);
         }
@@ -193,14 +198,25 @@ public class PhotoView extends ImageView implements IPhotoView {
         mAttacher.setScaleLevels(minimumScale, mediumScale, maximumScale);
     }
 
+    public boolean isShouldUpdate() {
+        return shouldUpdate;
+    }
+
+    public void setShouldUpdate(boolean shouldUpdate) {
+        this.shouldUpdate = shouldUpdate;
+    }
+
     @Override
     // setImageBitmap calls through to this method
     public void setImageDrawable(Drawable drawable) {
         super.setImageDrawable(drawable);
-        if (null != mAttacher) {
-            mAttacher.update();
+        if (shouldUpdate) {
+            if (null != mAttacher) {
+                mAttacher.update();
+            }
         }
     }
+
 
     @Override
     public void setImageResource(int resId) {

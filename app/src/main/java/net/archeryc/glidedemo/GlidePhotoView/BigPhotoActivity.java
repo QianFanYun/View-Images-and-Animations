@@ -78,6 +78,7 @@ public class BigPhotoActivity extends AppCompatActivity {
             container.removeView(photoViews[position]);
         }
 
+
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             GlidePhotoView photoView = new GlidePhotoView(BigPhotoActivity.this, urls.get(position));

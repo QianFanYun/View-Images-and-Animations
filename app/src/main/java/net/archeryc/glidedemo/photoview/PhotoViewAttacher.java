@@ -161,7 +161,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
     public PhotoViewAttacher(ImageView imageView, boolean zoomable) {
         mImageView = new WeakReference<>(imageView);
 
-        imageView.setDrawingCacheEnabled(true);
+        imageView.setDrawingCacheEnabled(true);//确保可以获取到bitmap对象，但是这种做法效率略低
         imageView.setOnTouchListener(this);
 
         ViewTreeObserver observer = imageView.getViewTreeObserver();
