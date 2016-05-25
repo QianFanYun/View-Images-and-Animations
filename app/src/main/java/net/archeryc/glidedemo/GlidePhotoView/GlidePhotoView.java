@@ -2,20 +2,18 @@ package net.archeryc.glidedemo.GlidePhotoView;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
 
 import net.archeryc.glidedemo.ImageLoader.GlideImageLoader;
 import net.archeryc.glidedemo.ImageLoader.LoadingImageListener;
 import net.archeryc.glidedemo.photoview.PhotoView;
+import net.archeryc.glidedemo.photoview.PhotoViewAttacher;
 
 
 /**
@@ -103,6 +101,12 @@ public class GlidePhotoView extends PhotoView {
                 } else {
                     setImageBitmap(bitmap);
                 }
+                getAttacher().setOnstartBaseMatrixListener(new PhotoViewAttacher.OnStartBaseMatrixListener() {
+                    @Override
+                    public void onStart() {
+                        stopAnim();
+                    }
+                });
                 stopAnim();
                 longClickDialog.setBitmap(bitmap);
 
@@ -125,9 +129,12 @@ public class GlidePhotoView extends PhotoView {
     protected void onDraw(final Canvas canvas) {
         super.onDraw(canvas);
         if (isLoading) {
+            paint.setColor(Color.BLACK);
+            canvas.drawRect(0,0,PhotoViewHelper.screenWidth(mContext),PhotoViewHelper.screenHeight(mContext),paint);
             if (currentValue == 0) {//如果开始的时候值为0，表明动画还没开始，先开启一个加载动画
                 startCircleAnim();
             } else {//动画已经开始，使用currentValue画圆
+                paint.setColor(Color.WHITE);
                 canvas.drawCircle(0.5f * (float) PhotoViewHelper.screenWidth(mContext), 0.5f * (float) PhotoViewHelper.screenHeight(mContext), currentValue, paint);
             }
         } else {
@@ -149,4 +156,5 @@ public class GlidePhotoView extends PhotoView {
             }
         });
     }
+
 }

@@ -45,7 +45,6 @@ import java.lang.ref.WeakReference;
 
 import static android.view.MotionEvent.ACTION_CANCEL;
 import static android.view.MotionEvent.ACTION_DOWN;
-import static android.view.MotionEvent.ACTION_MOVE;
 import static android.view.MotionEvent.ACTION_UP;
 
 public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
@@ -468,7 +467,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
                 if (top != mIvTop || bottom != mIvBottom || left != mIvLeft
                         || right != mIvRight) {
                     // Update our base matrix, as the bounds have changed
-                    updateBaseMatrix(imageView.getDrawable());
+                    updateBaseMatrix(imageView.getDrawable(), false);
 
                     // Update values as something has changed
                     mIvTop = top;
@@ -477,7 +476,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
                     mIvLeft = left;
                 }
             } else {
-                updateBaseMatrix(imageView.getDrawable());
+                updateBaseMatrix(imageView.getDrawable(), false);
             }
         }
     }
@@ -707,7 +706,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
                 setImageViewScaleTypeMatrix(imageView);
 
                 // Update the base matrix using the current drawable
-                updateBaseMatrix(imageView.getDrawable());
+                updateBaseMatrix(imageView.getDrawable(), true);
             } else {
                 // Reset the Matrix...
                 resetMatrix();
@@ -933,7 +932,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
      *
      * @param d - Drawable being displayed
      */
-    private void updateBaseMatrix(Drawable d) {
+    private void updateBaseMatrix(Drawable d, boolean isFirst) {
         ImageView imageView = getImageView();
         if (null == imageView || null == d) {
             return;
@@ -975,10 +974,17 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
             }
 
             switch (mScaleType) {
+
                 case FIT_CENTER:
                     //默认的scaleType
-                    float mutiple = (float) PhotoViewHelper.screenWidth(imageView.getContext()) / ((float) drawableWidth);
-                    mBaseMatrix.postScale(mutiple, mutiple, 0, 0);
+
+                    final float mutiple = (float) PhotoViewHelper.screenWidth(imageView.getContext()) / ((float) drawableWidth);
+
+
+                    mBaseMatrix.setScale(mutiple, mutiple, 0, 0);
+                    resetMatrix();
+
+
 //                    mBaseMatrix
 //                            .setRectToRect(mTempSrc, mTempDst, ScaleToFit.CENTER);
 
@@ -1001,7 +1007,17 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
             }
         }
 
-        resetMatrix();
+//        resetMatrix();
+    }
+
+    private OnStartBaseMatrixListener startBaseMatrixListener;
+
+    public void setOnstartBaseMatrixListener(OnStartBaseMatrixListener startBaseMatrixListener) {
+        this.startBaseMatrixListener = startBaseMatrixListener;
+    }
+
+    public interface OnStartBaseMatrixListener {
+        public void onStart();
     }
 
     private int getImageViewWidth(ImageView imageView) {

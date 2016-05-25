@@ -9,13 +9,17 @@
     </style>
 
     <style name="PhotoViewActivity" parent="AppTheme">
-        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    　　
+    　　<item name="android:windowIsTranslucent">true</item>
+    　　
+    <!--　　<item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>-->
     </style>
 
     <style name="AnimationActivity">
-        <item name="android:activityOpenEnterAnimation">@anim/photo_activity_in</item>
-        <item name="android:activityOpenExitAnimation">@anim/photo_activity_out</item>
-        <item name="android:activityCloseEnterAnimation">@anim/photo_activity_in</item>
-        <item name="android:activityCloseExitAnimation">@anim/photo_activity_out</item>
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
     </style>
 </resources>

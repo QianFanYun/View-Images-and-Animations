@@ -1,5 +1,6 @@
 package net.archeryc.glidedemo.GlidePhotoView;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.view.WindowManager;
 
 import net.archeryc.glidedemo.R;
 import net.archeryc.glidedemo.photoview.PhotoView;
+import net.archeryc.glidedemo.photoview.PhotoViewAttacher;
 
 import java.util.ArrayList;
 
@@ -31,13 +33,20 @@ public class BigPhotoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_big_photo);
         circleIndicator = (CircleIndicator) findViewById(R.id.circleIndicator);
         this.urls = getIntent().getStringArrayListExtra(Common.BigPhotoActivity.URLS);
+        if (urls.size()==1){
+            circleIndicator.setVisibility(View.GONE);
+        }else{
+            circleIndicator.setVisibility(View.VISIBLE);
+        }
         this.currentPosition = getIntent().getIntExtra(Common.BigPhotoActivity.CURRENT_POSITION, 0);
+
         init();
 
     }
 
     private void init() {
         viewPager = (HackyViewPager) findViewById(R.id.viewpager);
+        viewPager.setBackgroundColor(Color.TRANSPARENT);
         adapter = new MyViewPagerAdapter(urls);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(currentPosition);
@@ -49,8 +58,7 @@ public class BigPhotoActivity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        overridePendingTransition(R.anim.photo_activity_in, R.anim.photo_activity_out);
-
+        overridePendingTransition(0, R.anim.photo_activity_out);
     }
 
     class MyViewPagerAdapter extends PagerAdapter {
@@ -81,10 +89,22 @@ public class BigPhotoActivity extends AppCompatActivity {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
+
             GlidePhotoView photoView = new GlidePhotoView(BigPhotoActivity.this, urls.get(position));
+            photoView.setOnPhotoTapListener(new PhotoViewAttacher.OnPhotoTapListener() {
+                @Override
+                public void onPhotoTap(View view, float x, float y) {
+                    finish();
+                }
+
+                @Override
+                public void onOutsidePhotoTap() {
+                    finish();
+                }
+            });
             photoViews[position] = photoView;
-            Log.d("instantiateItem", "instantiateItem");
-            container.addView(photoView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
+            container.addView(photoView);
             return photoView;
         }
 
