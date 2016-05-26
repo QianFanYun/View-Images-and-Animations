@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96476b27-1fc2-4419-b478-099fad34b7fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="View-Image-and-Animations.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2340,7 +2341,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464234043760</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="更正gif图">
+      <created>1464234170359</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1464234170359</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
