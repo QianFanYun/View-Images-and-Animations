@@ -446,7 +446,6 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
     @Override
     public void onGlobalLayout() {
-        Log.d("onGlobalLayout", "onGlobalLayout");
         ImageView imageView = getImageView();
 
         if (null != imageView) {
