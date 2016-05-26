@@ -1,10 +1,19 @@
-### 封装Glide的图片加载库和图片查看库
+### 封装Glide和PhotoView的图片加载库和图片查看库
 ![加载图](http://7xpp4m.com1.z0.glb.clouddn.com/loadImage.gif)
 
 ![查看大图](http://7xpp4m.com1.z0.glb.clouddn.com/final.gif)
 
 ### 加载图片
+    加载普通图片
 	GlideImageLoader.getInstance().loadImage(...);
+	加载圆形图片
+	GlideImageLoader.getInstance().loadCircleImage(...);
+	加载圆角图片
+	GlideImageLoader.getInstance().loadRoundImage(...,int dp);
+	添加加载监听
+	GlideImageLoader.getInstance().loadImage(...,LoadingImageListener loadListener);
+	加载Gif图
+	GlideImageLoader.getInstance().loadGif(...);
 
 ### 查看图片大图
 	
@@ -19,3 +28,7 @@
 	        intent.putExtra(Common.BigPhotoActivity.CURRENT_POSITION, 0);//当前图片的位置
 	        startActivity(intent);
 	        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+
+### PhotoView原理解析
+
+[PhotoView源码解析](https://www.zybuluo.com/archeryc/note/374243)

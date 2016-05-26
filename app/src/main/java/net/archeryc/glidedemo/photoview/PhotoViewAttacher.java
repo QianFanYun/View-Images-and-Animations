@@ -446,6 +446,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
     @Override
     public void onGlobalLayout() {
+        Log.d("onGlobalLayout", "onGlobalLayout");
         ImageView imageView = getImageView();
 
         if (null != imageView) {
@@ -982,7 +983,6 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
 
                     mBaseMatrix.setScale(mutiple, mutiple, 0, 0);
-                    resetMatrix();
 
 
 //                    mBaseMatrix
@@ -1007,7 +1007,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
             }
         }
 
-//        resetMatrix();
+        resetMatrix();
     }
 
     private OnStartBaseMatrixListener startBaseMatrixListener;

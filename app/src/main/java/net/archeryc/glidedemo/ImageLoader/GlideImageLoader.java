@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.widget.ImageView;
 
+import com.bumptech.glide.DrawableTypeRequest;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -267,7 +268,7 @@ public class GlideImageLoader extends ImageLoader{
      * @param imageView
      */
     @Override
-    public  void loadGif(Context context, Uri uri, ImageView imageView) {
+    public void loadGif(Context context, Uri uri, ImageView imageView) {
         Glide.with(context)
                 .load(uri)
                 .asGif()
