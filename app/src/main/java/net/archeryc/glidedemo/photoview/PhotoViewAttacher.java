@@ -36,6 +36,7 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
 
+import net.archeryc.glidedemo.GlidePhotoView.Common;
 import net.archeryc.glidedemo.GlidePhotoView.PhotoViewHelper;
 import net.archeryc.glidedemo.photoview.gestures.OnGestureListener;
 import net.archeryc.glidedemo.photoview.gestures.VersionedGestureDetector;
@@ -793,7 +794,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
             return false;
         }
 
-        //这个方法获取drawable对应的矩阵
+        //这个方法获取经过matrix变换后的drawable对应的矩阵
         final RectF rect = getDisplayRect(getDrawMatrix());
         if (null == rect) {
             return false;
@@ -916,7 +917,6 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
             checkImageViewScaleType();
             imageView.setImageMatrix(matrix);
-
             // Call MatrixChangedListener if needed
             if (null != mMatrixChangeListener) {
                 RectF displayRect = getDisplayRect(matrix);
@@ -1000,6 +1000,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
                 case FIT_XY:
                     mBaseMatrix.setRectToRect(mTempSrc, mTempDst, ScaleToFit.FILL);
                     break;
+
 
                 default:
                     break;
@@ -1160,8 +1161,6 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
             // We haven't hit our target scale yet, so post ourselves again
             if (t < 1f) {
                 Compat.postOnAnimation(imageView, this);
-            } else {
-                setZoomTransitionDuration(DEFAULT_ZOOM_DURATION);
             }
 
         }

@@ -1,5 +1,7 @@
 package net.archeryc.glidedemo.GlidePhotoView;
 
+import android.widget.ImageView;
+
 /**
  * Created by 24706 on 2016/5/23.
  */

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 
 
+import net.archeryc.glidedemo.ImageLoader.GlideImageLoader;
 import net.archeryc.glidedemo.R;
 import net.archeryc.glidedemo.photoview.PhotoView;
 import net.archeryc.glidedemo.photoview.PhotoViewAttacher;
@@ -29,7 +30,6 @@ public class BigPhotoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_big_photo);
         circleIndicator = (CircleIndicator) findViewById(R.id.circleIndicator);
         this.urls = getIntent().getStringArrayListExtra(Common.BigPhotoActivity.URLS);

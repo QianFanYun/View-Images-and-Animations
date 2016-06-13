@@ -29,6 +29,10 @@ public class GlideImageLoader extends ImageLoader{
 
     public  static GlideImageLoader glideImageLoader;
 
+    private GlideImageLoader(){
+
+    }
+
     public static GlideImageLoader getInstance(){
         if (glideImageLoader==null){
             synchronized (GlideImageLoader.class){
