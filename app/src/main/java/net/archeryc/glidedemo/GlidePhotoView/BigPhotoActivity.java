@@ -4,13 +4,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
 
-import net.archeryc.glidedemo.ImageLoader.GlideImageLoader;
 import net.archeryc.glidedemo.R;
 import net.archeryc.glidedemo.photoview.PhotoView;
 import net.archeryc.glidedemo.photoview.PhotoViewAttacher;

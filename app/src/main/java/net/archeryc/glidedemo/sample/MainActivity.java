@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import net.archeryc.glidedemo.GlidePhotoView.BigPhotoActivity;
 import net.archeryc.glidedemo.GlidePhotoView.Common;
-import net.archeryc.glidedemo.ImageLoader.GlideImageLoader;
+import net.archeryc.glidedemo.ImageLoader.ImageLoader;
 import net.archeryc.glidedemo.R;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = (ImageView) findViewById(R.id.imageView);
-        GlideImageLoader.getInstance().loadImage(this,"http://ww2.sinaimg.cn/large/610dc034jw1f454lcdekoj20dw0kumzj.jpg",imageView);
+        ImageLoader.getInstance().loadImage(this,"http://ww2.sinaimg.cn/large/610dc034jw1f454lcdekoj20dw0kumzj.jpg",imageView);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,15 +36,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void showNormalImage(View view) {
-        GlideImageLoader.getInstance().loadCircleImage(this,normalUrl,imageView);
+        ImageLoader.getInstance().loadCircleImage(this,normalUrl,imageView);
     }
 
     public void showResourceImage(View view) {
-        GlideImageLoader.getInstance().loadImage(this,R.mipmap.ic_launcher,imageView);
+        ImageLoader.getInstance().loadImage(this,R.mipmap.ic_launcher,imageView);
     }
 
     public void showGif(View view) {
-        GlideImageLoader.getInstance().loadGif(this,gifUrl,imageView);
+        ImageLoader.getInstance().loadGif(this,gifUrl,imageView);
     }
 
 

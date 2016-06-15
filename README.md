@@ -5,15 +5,15 @@
 
 ### 加载图片
     加载普通图片
-	GlideImageLoader.getInstance().loadImage(...);
+	ImageLoader.getInstance().loadImage(...);
 	加载圆形图片
-	GlideImageLoader.getInstance().loadCircleImage(...);
+	ImageLoader.getInstance().loadCircleImage(...);
 	加载圆角图片
-	GlideImageLoader.getInstance().loadRoundImage(...,int dp);
+	ImageLoader.getInstance().loadRoundImage(...,int dp);
 	添加加载监听
-	GlideImageLoader.getInstance().loadImage(...,LoadingImageListener loadListener);
+	ImageLoader.getInstance().loadImage(...,LoadingImageListener loadListener);
 	加载Gif图
-	GlideImageLoader.getInstance().loadGif(...);
+	ImageLoader.getInstance().loadGif(...);
 
 ### 查看图片大图
 	
