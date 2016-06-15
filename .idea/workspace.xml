@@ -10,14 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20889f1-b8ac-4d76-b668-a6557e8de03e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/ImageLoader/AImageLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/BigPhotoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/GlidePhotoView/GlidePhotoView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/sample/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/sample/MainActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/ImageLoader/GlideImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/archeryc/glidedemo/ImageLoader/ImageLoader.java" />
     </list>
     <ignored path="View-Images-and-Animations.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2418,7 +2412,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465837938764</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modify class name">
+      <created>1465962357155</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1465962357155</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2468,7 +2468,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit Readme.md" />
     <MESSAGE value="resolve issue #2" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolve issue #2" />
+    <MESSAGE value="modify class name" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify class name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

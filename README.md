@@ -4,15 +4,15 @@
 ![查看大图](http://7xpp4m.com1.z0.glb.clouddn.com/viewpager.gif)
 
 ### 加载图片
-    加载普通图片
+    //加载普通图片
 	ImageLoader.getInstance().loadImage(...);
-	加载圆形图片
+	//加载圆形图片
 	ImageLoader.getInstance().loadCircleImage(...);
-	加载圆角图片
+	//加载圆角图片
 	ImageLoader.getInstance().loadRoundImage(...,int dp);
-	添加加载监听
+	//添加加载监听
 	ImageLoader.getInstance().loadImage(...,LoadingImageListener loadListener);
-	加载Gif图
+	//加载Gif图
 	ImageLoader.getInstance().loadGif(...);
 
 ### 查看图片大图
